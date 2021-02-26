@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+        <title>This is Hidden HTML</title>
+    </head>
+<body>
+<h1>Hidden things by Saikumar Mylavarapu</h1>
+<h2>Getting input</h2>
+
+<form>
+    <label for="form1_age">What is your age </label>
+    <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
+
+    <label for="form1_nick">What is your nickname </label>
+    <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
+
+    <input type="button" onclick="resolveForm()" value="Get values from form">
+</form>
+
+<form>
+    <label for="form1_word">Enter the secret word </label>
+    <input type ="password" id="form1_word" name="form1_word" min=10 max=50 step=2 value=secret> <br>
+
+    <label for="form1_guess">Enter a Guess</label>
+    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
+
+    <input type="button" onclick="processGuess()" value="check the Guess">
+</form>
+
+<p id="result"> text</p>
+
+<script> 
+
+        var correct = 0
+        var wrong= 0
+
+    function processGuess (){
+
+        let first = document.getElementById("form1_word").value
+        
+                
+        let sec = document.getElementById("form1_guess").value
+        
+        
+        if(first === sec){
+            correct++
+            document.getElementById("result").innerHTML = correct
+            window.alert("Congrats")
+        } else {
+            wrong++
+            document.getElementById("result").innerHTML = wrong
+            windoe.alert("Sorry")
+            
+        }
+    }
+    </script>
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+function resolveForm (){
+    console.log("Getting form values")
+    age = document.getElementById("form1_age").value
+    nick = document.getElementById("form1_nick").value
+    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(confirmed){
+        out.innerHTML = "Values were confirmed"
+    } else {
+        out.innerHTML = "Values were not confirmed"
+    }
+}
+</script>
+
+</body>
+</html> 
