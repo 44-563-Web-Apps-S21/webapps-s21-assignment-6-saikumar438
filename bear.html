@@ -51,7 +51,28 @@
     out.innerHTML = my_bear
     my_bear= JSON.parse(my_bear)
     }
+
+    function updatebear()
+    {
+        var num1=document.getElementById("form1_prop").value
+        var num2 = document.getElementById("form1_value").value
+        my_bear[prop] = values;
+        out.document.getElementById("result")
+        my_bear= JSON.stringify(my_bear)
+    out.innerHTML = my_bear
+    my_bear= JSON.parse(my_bear)
+    }
 </script>
+
+<form>
+    <label for="form1_prop">Enter a property </label>
+    <input type ="text" id="form1_prop" name="form1_prop" min=10 max=50 step=2 value=color> <br>
+
+    <label for="form1_value">Enter a value </label>
+    <input type ="text" id="form1_value" name="form1_value"> <br>
+
+    <input type="button" onclick="updatebear()" value="Update the bear">
+</form>
 
 <script> 
 
