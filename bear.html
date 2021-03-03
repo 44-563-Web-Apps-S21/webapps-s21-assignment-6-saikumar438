@@ -56,7 +56,7 @@
     {
         var num1=document.getElementById("form1_prop").value
         var num2 = document.getElementById("form1_value").value
-        my_bear[prop] = values;
+        my_bear[num1] = num2
         out.document.getElementById("result")
         my_bear= JSON.stringify(my_bear)
     out.innerHTML = my_bear
@@ -82,7 +82,7 @@ function resolveForm (){
     nick = document.getElementById("form1_nick").value
     confirmed = confirm("Are these the values? "+age+" and "+nick)
     
-    out = document.getElementById("result")
+    out = document.getElementById("result2")
     if(confirmed){
         out.innerHTML = "Values were confirmed"
     } else {
@@ -90,6 +90,8 @@ function resolveForm (){
     }
 }
 </script>
-
+<p id="result2">
+replaced
+</p>
 </body>
 </html> 
