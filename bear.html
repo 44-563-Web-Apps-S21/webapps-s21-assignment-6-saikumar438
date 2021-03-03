@@ -46,8 +46,10 @@
     }else{
         my_bear["shirt"]=false;
     }
-
-    document.getElementById("result").innerHTML = my_bear
+    out = document.getElementById("result")
+    my_bear= JSON.stringify(my_bear)
+    out.innerHTML = my_bear
+    my_bear= JSON.parse(my_bear)
     }
 </script>
 
