@@ -4,6 +4,39 @@
         <title>
             Computing in Js
         </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            .arithForm {
+                width: 500px;
+                margin: auto
+            }
+    
+            .permute {
+                border: 1px solid brown;
+                margin: auto;
+                padding: 5px;
+                border-radius: 5px;
+                text-align: center;
+                
+                
+            }
+    
+    
+            .arithmeticResult {
+                display: flex;
+                display: inline-block;
+            }
+    
+            #result2 {
+                
+                font-style: italic;
+            }
+        </style>
     </head>
  
 <body>
@@ -12,18 +45,24 @@
 
 <h2>Saikumar Mylavarapu Computes </h2>
 
-<form>
-    <label for="form1_num1">nter a Number </label>
+<form class="arithForm">
+    <div class="form-group">
+    <label for="form1_num1">Enter a Number </label>
     <input type ="number" id="form1_num1" name="form1_num1" value=10> <br>
-
+</div>
+<div class="form-group">
     <label for="form1_num2">Enter a Number </label>
     <input type ="number" id="form1_num2" name="form1_num2" value="2" autofocus> <br>
+</div>
+<div class="text-center">
 
     <input type="button" onclick="permutations()" value="Compute">
+</div>
 </form>
 
-
+<div class="permute">
 <p id="result">This text will be replaced </p>
+</div>
 
 <script> 
 
@@ -41,21 +80,27 @@ function permutations(){
 
 </script>
     <form>
-        <input type="radio" id="rg1_plus"  value="Plus" name="radio" onchange="processRadio()"  
+        <div class="form-check">
+        <input type="radio" id="rg1_plus"  value="Plus" name="radio" onclick="processRadio()"  
         >
+        
       <label for="rg1_plus">+</label></br>
-    
-      <input type="radio" id="rg1_minus" name="radio"  onchange="processRadio()"
+    </div>
+    <div class="form-check">
+      <input type="radio" id="rg1_minus" name="radio"  onclick="processRadio()"
          value="minus">
       <label for="rg1_minus">-</label></br>
-    
-      <input type="radio" id="rg1_times"    name="radio"  onchange="processRadio()"  
+    </div>
+    <div class="form-check">
+      <input type="radio" id="rg1_times"    name="radio"  onclick="processRadio()"  
          value="*">
       <label for="rg1_times">*</label></br>
-
-      <input type="radio" id="rg1_divide"   name="radio"   onchange="processRadio()"  
+    </div>
+    <div class="form-check">
+      <input type="radio" id="rg1_divide"   name="radio"   onclick="processRadio()"  
       value="/">
    <label for="rg1_divide">/</label></br>
+</div>
     </form>
 
 
