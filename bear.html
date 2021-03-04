@@ -15,6 +15,15 @@
     .heads{
         color:red
     }
+    .checks{
+        padding: 20px;
+    }
+    .buttons{
+        background-color: red;
+    }
+    #result{
+        color:rgb(59, 42, 212)
+    }
 </style>
 </head>
 
@@ -23,19 +32,23 @@
     <h2>Saikumar Mylavarapu builds a bear</h2>
 </div>
 
-
+<div>
     <form>
+        <div class = "checks">
         <label for="form1_hat">Hat </label>
         <input type="checkbox" id="form1_hat" name="form1_hat" value=hat> <br>
+    </div>
+    <div class = "checks">
         <label for="form1_scarf">scarf</label>
         <input type="checkbox" id="form1_scarf" name="form1_scarf" value=scarf> <br>
-
+    </div>
+    <div class = "checks">
         <label for="form1_shirt">shirt </label>
         <input type="checkbox" id="form1_shirt" name="form1_shirt" autofocus> <br>
-
+    </div class ="checks">
         <input type="button" onclick="startbear()" value="Start a bear">
     </form>
-
+</div>
 
     <p id="result">This text will be replaced </p>
 
